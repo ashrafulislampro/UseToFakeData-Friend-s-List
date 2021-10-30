@@ -12,9 +12,13 @@ const Cart = (props) => {
                     <div>
                               <h1>Cart Summary</h1>
                               <br />
-                              <h4>Added Friend's : {cart.length}</h4>
-                              <h4>Total Salary : {totalSalary}</h4>
-                              
+                              <p>Added Friend's : {cart.length}</p>
+                              <p>Total Salary : {totalSalary}</p>
+                              <ul>
+                                        {
+                                                  cart.map(name => <li key={name.id}>{name.first_name} {name.last_name}</li>)
+                                        }
+                              </ul>
                     </div>
           );
 };
